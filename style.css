@@ -32,11 +32,15 @@
   width: 50%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1090px) {
   .left-side {
     width: 100%;
   }
+  .right-side{
+    width: 100%;
+  }
 }
+
 
 .image {
   width: 100%;
@@ -50,12 +54,14 @@
 }
 
 @media (max-width: 1000px) {
+  .left-side {
+    width: 50%;
+  }
   .right-side {
-    width: 100%;
+    width: 50%;
     position: absolute;
     top: 200px;
     height: 100%;
-
     padding: 0;
     
   }
@@ -77,7 +83,7 @@
    color: #fff !important;
    height: 80px !important;
    word-wrap: break-word;
-   text-align: justify;
+   text-align: left;
    
   }
 
@@ -213,6 +219,7 @@
 }
 
 .product-name {
+  display: inline-block;
   width: 200px;
   height: 20px;
   font-family: 'Avenir';
@@ -220,16 +227,18 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 160%;
-  text-align: justify;
+  word-break: break-word;
+  text-align: left;
   color: #000000;
   margin-top: 10px;
 }
 
 @media (max-width: 1000px) {
   .product-name {
-   width: 100%;
+   width: 100px;
    word-wrap: break-word;
-   text-align: justify;
+   text-align: left;
+   font-size: 15px;
   }
 }
 
@@ -282,6 +291,20 @@
   justify-content: space-between;
   align-items: center;
   width: 200px;
+}
+
+@media (max-width: 1000px) {
+  .price-colors {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+
+  .price {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
 }
 
 .colors {
