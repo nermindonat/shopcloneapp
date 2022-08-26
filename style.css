@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'ITC';
+  src: url(fonts/ITCAvantGardePro-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url(fonts/Avenir.ttc) format("opentype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +32,7 @@
   width: 50%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1000px) {
   .left-side {
     width: 100%;
   }
@@ -37,6 +47,64 @@
 .right-side {
   position: relative;
   flex: 1;
+}
+
+@media (max-width: 1000px) {
+  .right-side {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    height: 100%;
+
+    padding: 0;
+    
+  }
+
+  .right-side-content {
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 1000px) {
+   .description {
+    width: 80% !important;
+   }
+}
+
+@media (max-width: 1000px) {
+  .title {
+   width: 100%;
+   color: #fff !important;
+   height: 80px !important;
+   word-wrap: break-word;
+   text-align: justify;
+   
+  }
+
+  .subtitle {
+    visibility: hidden;
+  }
+
+  .products {
+    margin-top: 20px !important;
+  }
+  
+  .btn-shop {
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    font-family: Avenir;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .btn {
+    background-color: #fff !important;
+  }
+
 }
 
 .right-side-content {
@@ -60,7 +128,7 @@
   height: 123px;
   top: 96px;
   left: 120px;
-  font-family: "ITC Avant Garde Gothic Pro";
+  font-family: 'ITC';
   font-size: 31.25px;
   line-height: 40.62px;
   font-weight: 700;
@@ -68,18 +136,14 @@
   color: #000000;
 }
 
-@media (max-width: 1088px) {
-  .title {
-    font-size: 15px;
-  }
-}
+
 
 .subtitle {
   height: 52px;
   width: 432px;
   left: 120px;
   top: 231px;
-  font-family: "Avenir";
+  font-family: 'Avenir';
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0em;
@@ -90,7 +154,7 @@
 .btn-shop {
   height: 17px;
   width: 146px;
-  font-family: "Avenir";
+  font-family: 'Avenir';
   font-size: 13px;
   font-weight: 900;
   line-height: 17px;
@@ -98,14 +162,14 @@
   text-align: left;
   border: 0;
   text-transform: capitalize;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .btn {
   height: 1px;
   width: 146px;
   left: 0px;
-  border-radius: 0px;
+  border: 0px;
   flex: none;
   order: 1;
   align-self: stretch;
@@ -113,12 +177,17 @@
   background-color: #000000;
 }
 
+.products {
+  position: relative;
+  margin-top: 40px;
+}
+
 .product-cards {
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 40px;
+
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -146,7 +215,7 @@
 .product-name {
   width: 200px;
   height: 20px;
-  font-family: "Avenir";
+  font-family: 'Avenir';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -154,6 +223,14 @@
   text-align: justify;
   color: #000000;
   margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  .product-name {
+   width: 100%;
+   word-wrap: break-word;
+   text-align: justify;
+  }
 }
 
 .price {
@@ -175,16 +252,16 @@
 
 .left-arrow,
 .next-arrow {
-  background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px;
-  width: 40px;
-  height: 40px;
+  padding: 10px;
+  width: 35px;
+  height: 35px;
   position: absolute;
-  top: 30%;
+  top: 35%;
+  background-color: transparent;
 }
 .left-arrow {
   left: 0;
